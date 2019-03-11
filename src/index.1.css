@@ -14,16 +14,6 @@ html {
 body {
   background: hsl(197, 60%, 21%);
   font-size: 1.6rem;
-  margin: 0px;
-  min-height: calc(100vh - 100px);
-  letter-spacing: -1px;
-  color: #ddd;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  /* text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); */
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -35,10 +25,7 @@ code {
 a {
   text-decoration: none;
 }
-.header__navbar a {
-  text-decoration: none;
-  color: #ddd;
-}
+
 .head__contianer {
   background: hsl(197, 60%, 29%);
   color: #ddd;
@@ -60,40 +47,20 @@ a {
 .header__navbar li {
   display: inline;
 }
-.link--important {
-  padding: 0 .5rem .3rem .5rem;
-  border: .2rem solid hsl(30, 65%, 60%);
-  transition: bottom 0.2s, box-shadow 0.2s;
-  transition-timing-function: ease-in-out;
-  border-radius: .5rem;
-  text-transform: uppercase;
-}
-.link--important:hover {
-  position: relative;
-  bottom: .2rem;
-  box-shadow: .2rem .2rem 1rem hsl(197, 61%, 19%);
-}
-.github {
-  padding: 0 1rem 0 3rem;
-}
-.github svg {
-  width: 2.8rem;
-  height: 2.8rem;
-}
-.header__navbar li:not(.link--important):not(.github) {
+.header__navbar a {
   text-decoration: none;
-  transition: bottom 0.2s, box-shadow 0.2s, border-radius 0.2s;
+  color: #ddd;
+  transition: bottom .2s, box-shadow 0.2s;
+  transition-timing-function: ease-in-out;
   bottom: 0;
-  padding: 0 1rem .3rem 1rem;
-  border-radius: .5rem;
-  text-transform: uppercase;
+  padding: 0 .5rem .4rem;
+  border-radius: 1rem;
 }
-.header__navbar li:hover:not(.link--important):not(.github) {
+.header__navbar a:hover {
   position: relative;
   bottom: .2rem;
   box-shadow: .2rem .2rem 1rem hsl(197, 61%, 19%);
-}
-
+} 
 main {
   display: grid;
   margin: 30px;
@@ -115,9 +82,9 @@ section p {
 section {
   display: grid;
   background: hsl(197, 61%, 91%);
-  border: 2px solid #d27f2c;
+  border: 2px solid hsl(35, 100%, 75%);
   padding: 30px;
-  box-shadow: .2rem .2rem 1rem #222;
+  box-shadow: .3rem .3rem .2rem #000;
 }
 /*
 .logo {
@@ -143,3 +110,20 @@ section {
   display: inline;
 } */
 
+.link__important {
+  display: grid;
+  align-content: center;
+  justify-content: baseline;
+  padding: .5rem;
+  font-size: 1.8rem;
+  background: #d27f2c;
+  color: #002a3a;
+  transition: border-radius 0.3s, background 0.3s, color 0.3s;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+}
+.link__important:hover {
+  background: #002a3a;
+  color: #ddd;
+  border-radius: 20px;
+}
