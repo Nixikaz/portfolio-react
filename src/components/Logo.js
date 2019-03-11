@@ -1,7 +1,11 @@
 import React from 'react';
 
 const Logo = props => {
-  return <h1 class="logo">Kevin Zembrodt</h1>;
+  return (
+    <div className="logo">
+      <h1>Kevin Zembrodt</h1>
+    </div>
+  );
 };
 
 export default Logo;
