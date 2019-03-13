@@ -7,6 +7,8 @@ html {
 *,
 *:before,
 *:after {
+  margin: 0;
+  padding: 0;
   box-sizing: inherit;
 }
 html {
@@ -37,88 +39,93 @@ a {
   text-decoration: none;
 }
 .App {
+  min-height: 100vh;
   display: grid;
   grid-template-areas: 
     "header header header"
-    ". content ."
+    "content content content"
     "footer footer footer";
+  grid-template-rows: auto 1fr auto;
 }
 .header__navbar a {
   text-decoration: none;
   color: #ddd;
 }
-header {
-  grid-area: header;
-}
 .head__contianer {
+  grid-area: header;
   background: #1d5d76;
-  color: #ddd;
   display: grid;
-  grid-template-areas: ". logo . . navigation .";
-  padding: 10px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 1fr 1fr;
+  padding: 1rem 2rem 1rem 2rem;
   border-bottom: 4px solid #d27f2c;
   box-shadow: 0 .1rem 2rem #222;
 }
 .logo {
-  grid-area: logo;
-  padding-left: 10px;
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  grid-row: span 2;
 }
 .header__navbar {
   display: grid;
-  grid-area: navigation;
-  align-content: center;
+  align-content: end;
   justify-content: end;
-  padding-right: 10px;
 }
 .header__navbar li {
   display: inline;
 }
-.link--important {
-  padding: 0 .5rem .3rem .5rem;
-  border: .2rem solid hsl(30, 65%, 60%);
-  transition: bottom 0.2s, box-shadow 0.2s;
-  transition-timing-function: ease-in-out;
-  border-radius: .5rem;
-  text-transform: uppercase;
-}
-.link--important:hover {
-  position: relative;
-  bottom: .2rem;
-  box-shadow: .2rem .2rem 1rem hsl(197, 61%, 19%);
-}
-.github {
-  padding: 0 1rem 0 3rem;
-}
-.github svg {
-  width: 2.8rem;
-  height: 2.8rem;
-}
-.header__navbar li:not(.link--important):not(.github) {
-  text-decoration: none;
-  transition: bottom 0.2s, box-shadow 0.2s, border-radius 0.2s;
-  bottom: 0;
-  padding: 0 1rem .3rem 1rem;
-  border-radius: .5rem;
-  text-transform: uppercase;
-}
-.header__navbar li:hover:not(.link--important):not(.github) {
-  position: relative;
-  bottom: .2rem;
-  box-shadow: .2rem .2rem 1rem hsl(197, 61%, 19%);
-}
-.content {
+.social__links {
   display: grid;
+  align-content: end;
+  justify-content: end;
+}
+.social a {
+  padding: .3rem;
+}
+.social svg {
+  color: #ddd;
+  width: 2rem;
+  height: 2rem;
+}
+.social path {
+  transform: scale(0.7);
+}
+.social svg:hover path {
+  transition: fill .3s;
+  fill: #d27f2c;
+}
+li.active {
+  border-style: solid;
+  border-width: .2rem 0 .2rem 0;
+  border-color: hsl(30, 65%, 60%);
+  border-radius: .5rem;
+}
+li {
+  list-style: none;
+  padding: .5rem;
+}
+.header__navbar li {
+  color: #ddd;
+  text-decoration: none;
+  border-radius: .5rem;
+  text-transform: uppercase;
+  transition: color .3s;
+}
+.header__navbar li:hover a {
+  transition: color .3s;
+  color: hsl(30, 65%, 60%);
+}
+
+.content {
   grid-area: content;
-  margin: 30px;
+  display: grid;
+  margin: 2rem;
   grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(260px, auto));
-  align-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(10rem, auto));
+  align-content: start;
   justify-content: center;
 }
-/* main:last-child {
-  display: grid;
-  grid-area: 1 / -1;
-} */
 .svg--html {
   grid-area: card__logo;
   padding-top: .3rem;
@@ -137,7 +144,7 @@ header {
 section abbr, section h1 {
   padding: 0;
   margin: 0;
-  text-align: center;
+  text-align: left;
   grid-area: card__header;
   color: hsl(197, 61%, 29%);
 }
@@ -156,31 +163,35 @@ section {
   box-shadow: .2rem .2rem 1rem #222;
 }
 footer {
-  /* display: grid; */
-  /* align-content: center;
-  justify-content: center; */
-  height: 100px;
+  padding: 2rem;
   grid-area: footer;
-  grid-row: 3 / 4;
+  height: 100%;
+  grid-row: 3 / -1;
   text-align: center;
   background: #1d5d76;
 }
 
 
-@media screen and (max-width: 740px) {
+@media screen and (max-width: 900px) {
   .head__contianer {
-    grid-template-areas: ". logo ."
-    ". navigation .";
-    padding: 5px;
-    border-bottom: 4px solid #d27f2c;
-    box-shadow: 0 .1rem 2rem #222;
+    display: block;
+    padding: 0;
   }
-  .logo {
-    display: grid;
-    align-content: center;
-    justify-content: center;
+  .content {
+    grid-template-columns: 1fr;
   }
   .header__navbar {
     justify-content: center;
+  }
+  .social__links {
+    padding-top: 1rem;
+    justify-content: center;
+  }
+  .social path {
+    transform: scale(1);
+  }
+  .social svg {
+    width: 3rem;
+    height: 3rem;
   }
 }
