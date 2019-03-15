@@ -15,7 +15,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  background: hsl(197, 60%, 21%);
+  background: fixed linear-gradient( #154355 25%, #d27f2c 50%, #154355 75%);
   font-size: 1.6rem;
   margin: 0px;
   min-height: 100%;
@@ -39,6 +39,7 @@ a {
   text-decoration: none;
 }
 .App {
+  background: url(./images/hexa_dark.png);
   min-height: 100vh;
   display: grid;
   grid-template-areas: 
@@ -52,7 +53,7 @@ a {
 }
 .header__navbar a {
   text-decoration: none;
-  color: #ddd;
+  color: #eee;
 }
 .head__contianer {
   grid-area: header;
@@ -60,10 +61,11 @@ a {
   display: grid;
   grid-template-areas: 
   '. logo . navbar social .';
-  /* padding: 1rem 2rem 1rem 2rem; */
+  padding: 1rem 2rem 1rem 2rem;
   border-bottom: 4px solid #d27f2c;
   box-shadow: .1rem .1rem 1rem #222;
   border-radius: 0 0 2rem 2rem;
+  z-index: 1;
 }
 .logo {
   display: grid;
@@ -71,8 +73,21 @@ a {
   justify-content: start;
   grid-area: logo;
 }
-.logo h2 {
+.logo h1 {
+  margin: 0;
+}
+.logo {
+  padding: 0;
   text-transform: uppercase;
+}
+.logo--opacity {
+  opacity: .7;
+}
+.logo__lastname {
+  transform: translate(5.5rem, -1.1rem);
+}
+.logo--light {
+  margin-top: 0;
 }
 .header__navbar {
   display: grid;
@@ -129,50 +144,57 @@ li {
 }
 
 .content {
+  background: #154355;
   grid-area: content;
   display: grid;
-  margin: 2rem;
+  margin-top: -2rem;
+  margin-bottom: -2rem;
+  z-index: 0;
+  padding: 3rem;
   grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-content: start;
   justify-content: center;
+  box-shadow: .1rem .1rem 1rem #222;
 }
 .svg--large {
-  position: absolute;
-  width: 15rem;
-  top: 6.5rem;
-  left: .5rem;
-  padding: 1rem;
+  width: 10rem;
+  float: left;
+  padding: .5rem;
   transition: opacity 0.3s;
   opacity: 0.3;
   z-index: 0;
 }
-section abbr, section h1 {
-  padding: 0;
+.card__title {
+  background: #ddd;
+  padding: 1rem;
+  padding-left: 2rem;
   margin: 0;
-  text-align: center;
+  text-align: left;
   grid-area: card__header;
-  color: hsl(197, 61%, 29%);
+  background: hsl(197, 61%, 29%);
   z-index: 1;
+  box-shadow: 0 .1rem .2rem #888;
 }
-section p {
+.card__title h1 {
+  text-shadow: .2rem .2rem .3rem #222;
+  margin: 0;
+}
+.card__body {
   z-index: 1;
   text-indent: 2rem;
   color: hsl(197, 49%, 45%);
   grid-area: card__paragraph;
+  padding: 2rem;
 }
-section {
+.card {
+  border-radius: 1rem;
   display: grid;
-  position: relative;
   overflow: hidden;
   grid-template-areas: 
-  "card__header card__paragraph";
-  grid-template-columns: 10rem 1fr;
+  "card__header" "card__paragraph";
   background: #fff;
-  border: 2px solid #d27f2c;
-  grid-gap: 3rem;
-  padding: 30px;
-  box-shadow: .1rem .1rem 1rem #222;
+  box-shadow: .2rem .2rem 1rem #222;
 }
 section:hover .svg--large {
   opacity: 1;
@@ -185,6 +207,8 @@ footer {
   text-align: center;
   background: #1d5d76;
   border-radius: 2rem 2rem 0 0;
+  box-shadow: .1rem .5rem 1rem #222;
+  z-index: 1;
 }
 
 
