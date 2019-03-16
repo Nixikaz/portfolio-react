@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './images/code_hero.jpg';
 import './index.css';
 import './sanitize.css';
 // Internet Explorer 6-11

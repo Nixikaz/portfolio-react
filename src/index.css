@@ -44,10 +44,11 @@ a {
   display: grid;
   grid-template-areas: 
     ". header header header ."
+    ". hero hero hero ."
     ". content content content ."
     ". footer footer footer .";
   grid-template-columns: 1fr 3fr 5fr 3fr 1fr;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto 1fr auto;
   /* margin-right: 6rem;
   margin-left: 6rem; */
 }
@@ -142,7 +143,24 @@ li {
   transition: color .3s;
   color: hsl(30, 65%, 60%);
 }
-
+.hero {
+  grid-area: hero;
+  background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/code_hero.jpg");
+  background-size: 100%;
+  transform: translateY(-2rem);
+}
+.hero--center {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 50vh;
+  padding: 0;
+  margin: 0;
+}
+.hero--center p {
+  text-transform: lowercase;
+  padding: 0;
+}
 .content {
   background: #154355;
   grid-area: content;
@@ -156,6 +174,7 @@ li {
   align-content: start;
   justify-content: center;
   box-shadow: .1rem .1rem 1rem #222;
+  /* overflow: hidden; */
 }
 .svg--large {
   width: 10rem;
@@ -194,16 +213,21 @@ li {
   grid-template-areas: 
   "card__header" "card__paragraph";
   background: #fff;
+  transition: .3s;
   box-shadow: .2rem .2rem 1rem #222;
 }
-section:hover .svg--large {
+.card:hover {
+  transform: translate(-0.2rem, -0.2rem);
+  box-shadow: .5rem .5rem 2rem #222;
+}
+.card:hover .svg--large {
   opacity: 1;
 }
 footer {
   padding: 2rem;
   grid-area: footer;
   height: 100%;
-  grid-row: 3 / -1;
+  grid-row: 4 / -1;
   text-align: center;
   background: #1d5d76;
   border-radius: 2rem 2rem 0 0;
