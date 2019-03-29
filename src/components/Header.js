@@ -6,7 +6,7 @@ import Social from './Social';
 class Header extends Component {
   render() {
     return (
-      <header className="head__contianer">
+      <header className="head__container">
         <Logo />
         <Navbar />
         <Social />

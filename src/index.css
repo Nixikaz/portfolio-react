@@ -16,7 +16,6 @@ html {
 }
 body {
   background: fixed linear-gradient( #154355 25%, #d27f2c 50%, #154355 75%);
-  font-size: 1.6rem;
   margin: 0px;
   min-height: 100%;
   letter-spacing: -1px;
@@ -39,6 +38,7 @@ a {
   text-decoration: none;
 }
 .App {
+  font-size: 1.6rem;
   background: url(./images/hexa_dark.png);
   min-height: 100vh;
   display: grid;
@@ -56,7 +56,7 @@ a {
   text-decoration: none;
   color: #eee;
 }
-.head__contianer {
+.head__container {
   grid-area: header;
   background: #1d5d76;
   display: grid;
@@ -80,16 +80,12 @@ a {
 .logo {
   padding: 0;
   text-transform: uppercase;
+  font-size: 2.3rem;
 }
 .logo--opacity {
   opacity: .7;
 }
-.logo__lastname {
-  transform: translate(5.5rem, -1.1rem);
-}
-.logo--light {
-  margin-top: 0;
-}
+
 .header__navbar {
   display: grid;
   align-content: center;
@@ -147,19 +143,33 @@ li {
   grid-area: hero;
   background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("./images/code_hero.jpg");
   background-size: 100%;
-  transform: translateY(-2rem);
+  transform: translateY(-1.5rem);
+  text-transform: uppercase;
+  overflow: hidden;
 }
-.hero--center {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  height: 50vh;
+.hero * {
   padding: 0;
   margin: 0;
 }
-.hero--center p {
+.hero__lastname {
+  opacity: 0.7;
+  font-size: 4.5rem;
+  transform: translate(.5rem, -2.1rem);
+}
+.hero__firstname {
+  font-size: 8.5rem;
+}
+.hero--center {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  margin: 10rem;
+}
+.hero--center .text--small {
+  display: grid;
+  justify-content: center;
   text-transform: lowercase;
-  padding: 0;
+  opacity: .7;
+  font-size: 4rem;
 }
 .content {
   background: #154355;
@@ -184,7 +194,18 @@ li {
   opacity: 0.3;
   z-index: 0;
 }
+.card {
+  border-radius: 1rem;
+  display: grid;
+  overflow: hidden;
+  grid-template-areas: 
+  "card__header" "card__paragraph";
+  background: #fff;
+  transition: .3s;
+  box-shadow: .2rem .2rem 1rem #222;
+}
 .card__title {
+  height: 6rem;
   background: #ddd;
   padding: 1rem;
   padding-left: 2rem;
@@ -200,21 +221,13 @@ li {
   margin: 0;
 }
 .card__body {
+  font-size: 1.7rem;
+  line-height: 2.3rem;
   z-index: 1;
   text-indent: 2rem;
-  color: hsl(197, 49%, 45%);
+  color: hsl(197, 61%, 29%);
   grid-area: card__paragraph;
-  padding: 2rem;
-}
-.card {
-  border-radius: 1rem;
-  display: grid;
-  overflow: hidden;
-  grid-template-areas: 
-  "card__header" "card__paragraph";
-  background: #fff;
-  transition: .3s;
-  box-shadow: .2rem .2rem 1rem #222;
+  padding: 1rem;
 }
 .card:hover {
   transform: translate(-0.2rem, -0.2rem);
@@ -227,7 +240,6 @@ footer {
   padding: 2rem;
   grid-area: footer;
   height: 100%;
-  grid-row: 4 / -1;
   text-align: center;
   background: #1d5d76;
   border-radius: 2rem 2rem 0 0;
@@ -235,7 +247,16 @@ footer {
   z-index: 1;
 }
 
-
+@media screen and (min-width: 1400px) {
+  .App {
+    grid-template-areas: 
+    ". . header header header . ."
+    ". . hero hero hero . ."
+    ". . content content content . ."
+    ". . footer footer footer . .";
+    grid-template-columns: 1fr 1fr 2fr 2fr 2fr 1fr 1fr;
+  }
+}
 @media screen and (max-width: 760px) {
   .head__contianer {
     display: block;
