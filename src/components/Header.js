@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import Navbar from './Navbar';
-import Logo from './Logo';
+import LogoComp from './LogoComp';
 import Social from './Social';
 
 class Header extends Component {
   render() {
     return (
       <header className="head__container">
-        <Logo />
+        <LogoComp />
         <Navbar />
         <Social />
       </header>

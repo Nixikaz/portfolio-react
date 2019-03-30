@@ -6,7 +6,7 @@ import './images/code_hero.jpg';
 import './index.css';
 import './sanitize.css';
 // Internet Explorer 6-11
-let isIE = /*@cc_on!@*/ false || !!document.documentMode;
+// let isIE = /*@cc_on!@*/ false || !!document.documentMode;
 
 ReactDOM.render(<App />, document.getElementById('root'));
 

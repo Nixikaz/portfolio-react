@@ -10,10 +10,11 @@ export default class Javascript extends Component {
         </div>
         <div className="card__body">
           <p>
-            <img className="svg--large" src={img} alt={title} />I have developed personal web pages with HTML on and off
-            for over 20 years. I recently got back into HTML because of an opportunity at my current job. They needed
-            someone with Front-end Development skills and I had the experience. Over the course of the past two years, I
-            have brushed up on the current HTML5 specification. My HTML knowledge includes: <em>Semantic HTML</em>
+            <img className="svg--large" src={img} alt={title} />
+            Writing JavaScript is what really drove me into wanting to become a web developer. In just under two years,
+            I have learned a lot about coding in JavaScript. I have just started using React. In fact, this website was
+            built using React as a learning experience. I am pretty familiar with writing vanilla JavaScript, but I also
+            have experience with jQuery and D3.js.
           </p>
         </div>
       </section>

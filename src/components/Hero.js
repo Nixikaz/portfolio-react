@@ -5,10 +5,12 @@ export default class Hero extends Component {
   render() {
     return (
       <div className="hero">
-        <div className="hero--center">
-          <h1 className="hero__firstname">Kevin</h1>
-          <h1 className="hero__lastname">Zembrodt</h1>
-          <span className="text--small">Front-End Web Developer</span>
+        <div className="hero__grid">
+          <span className="hero__intro">Hi, my name is</span>
+          <span className="hero__firstname">Kevin</span>
+          <span className="hero__and">and I am a</span>
+          <span className="hero__lastname">Zembrodt</span>
+          <span className="hero__webdev">front-end developer</span>
         </div>
       </div>
     );
