@@ -5,7 +5,7 @@ export default class Css extends Component {
     const { title, img } = this.props;
     const css = 'Cascading Style Sheets';
     return (
-      <section className="card">
+      <section className="card card--hover">
         <div className="card__title">
           <h1>{title}</h1>
         </div>

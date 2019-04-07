@@ -86,7 +86,7 @@ a {
 .header__navbar {
   display: grid;
   align-content: center;
-  justify-content: end;
+  justify-content: center;
   grid-area: navbar;
 }
 .header__navbar li {
@@ -253,11 +253,11 @@ li {
   grid-area: card__paragraph;
   padding: 1rem;
 }
-.card:hover {
+.card--hover:hover {
   transform: translate(-0.2rem, -0.2rem);
   box-shadow: .5rem .5rem 2rem #222;
 }
-.card:hover .svg--large {
+.card--hover:hover .svg--large {
   opacity: 1;
 }
 footer {
@@ -281,7 +281,7 @@ footer {
     grid-template-columns: 1fr 1fr 2fr 2fr 2fr 1fr 1fr;
   }
 }
-@media screen and (max-width: 399px) {
+@media screen and (max-width: 615px) {
   .head__container {
   grid-template-areas: 
   'logo'
@@ -328,34 +328,18 @@ footer {
   'hero_last'
   'hero_and'
   'hero_front';
-  margin: 5rem;
+  margin: 4rem 0 0 0;
+  }
+  .hero__intro {
+    padding-bottom: 1rem;
   }
   .hero__lastname {
     transform: translateY(-2.4rem);
   }
-  .hero__lastname::after {
-    display:block;
-    font-size: 3rem;
-  }
-}
-@media screen and (max-width: 980px) {
-  .hero__grid {
-    text-align: center;
-    grid-template-columns: 1fr;
-    grid-template-areas: 
-  'hero_intro'
-  'hero_first' 
-  'hero_last'
-  'hero_and'
-  'hero_front';
-  margin: 3rem 0 2rem 0;
-  }
-  .hero__lastname {
+  .hero__and {
     transform: translateY(-2.4rem);
   }
-  .hero__lastname::after {
-    display:block;
-    font-size: 3rem;
+  .hero__webdev {
+    transform: translateY(-2.4rem);
   }
-  
 }
