@@ -43,7 +43,7 @@ a {
   background: url(./images/hexa_dark.png);
   min-height: 100vh;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
     ". header header header ."
     ". hero hero hero ."
     ". content content content ."
@@ -61,7 +61,7 @@ a {
   grid-area: header;
   background: #1d5d76;
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
   '. logo . navbar social .';
   padding: 1rem 2rem 1rem 2rem;
   border-bottom: 4px solid #d27f2c;
@@ -177,7 +177,7 @@ li {
   font-weight: 850;
 }
 .hero__webdev {
-  grid-area: hero_front; 
+  grid-area: hero_front;
   font-size: 4rem;
   text-transform: lowercase;
   overflow: hidden;
@@ -185,7 +185,7 @@ li {
 }
 .hero__grid {
   display: grid;
-  grid-template-areas: 
+  grid-template-areas:
   'hero_intro .'
   'hero_first hero_and'
   'hero_last hero_front';
@@ -221,7 +221,7 @@ li {
   display: grid;
   overflow: hidden;
   grid-template-rows: 6rem auto;
-  grid-template-areas: 
+  grid-template-areas:
   "card__header"
   "card__paragraph";
   background: #fff;
@@ -248,10 +248,12 @@ li {
   font-size: 1.7rem;
   line-height: 2.3rem;
   z-index: 1;
-  text-indent: 2rem;
   color: hsl(197, 61%, 29%);
   grid-area: card__paragraph;
   padding: 1rem;
+}
+.card__body p {
+  text-indent: 2rem;
 }
 .card--hover:hover {
   transform: translate(-0.2rem, -0.2rem);
@@ -259,6 +261,10 @@ li {
 }
 .card--hover:hover .svg--large {
   opacity: 1;
+}
+.card__body form {
+  display: flex;
+  flex-direction: column;
 }
 footer {
   padding: 2rem;
@@ -273,7 +279,7 @@ footer {
 
 @media screen and (min-width: 1400px) {
   .App {
-    grid-template-areas: 
+    grid-template-areas:
     ". . header header header . ."
     ". . hero hero hero . ."
     ". . content content content . ."
@@ -283,7 +289,7 @@ footer {
 }
 @media screen and (max-width: 615px) {
   .head__container {
-  grid-template-areas: 
+  grid-template-areas:
   'logo'
   'navbar'
   'social';
@@ -322,9 +328,9 @@ footer {
   .hero__grid {
     text-align: center;
     grid-template-columns: 1fr;
-    grid-template-areas: 
+    grid-template-areas:
   'hero_intro'
-  'hero_first' 
+  'hero_first'
   'hero_last'
   'hero_and'
   'hero_front';
