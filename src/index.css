@@ -208,6 +208,9 @@ li {
   box-shadow: .1rem .1rem 1rem #222;
   /* overflow: hidden; */
 }
+.content--single {
+  grid-template-columns: 50%;
+}
 .svg--large {
   height: 11.5rem;
   float: left;
@@ -218,7 +221,7 @@ li {
 }
 .card {
   border-radius: 1rem;
-  display: grid;
+  display: inherit;
   overflow: hidden;
   grid-template-rows: 6rem auto;
   grid-template-areas:
@@ -297,11 +300,11 @@ footer {
   grid-template-rows: auto auto auto;
   }
   .App {
-    grid-template-columns: 1fr;
+    grid-template-columns: 0 auto auto auto 0;
     margin: 0;
   }
   .content {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
   }
   .logo {
     justify-content: center;
