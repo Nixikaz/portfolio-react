@@ -2,7 +2,7 @@ import React from 'react';
 
 const Projects = () => {
   return (
-    <main className="content">
+    <main className="content content--single">
       <section>
         <h1>Projects</h1>
         <p>

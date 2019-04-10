@@ -177,6 +177,7 @@ li {
   font-weight: 850;
 }
 .hero__webdev {
+  transform: translateY(-0.5rem);
   grid-area: hero_front;
   font-size: 4rem;
   text-transform: lowercase;
@@ -196,20 +197,31 @@ li {
 .content {
   background: #154355;
   grid-area: content;
-  display: grid;
+  display: flex;
   margin-top: -2rem;
   margin-bottom: -2rem;
   z-index: 0;
-  padding: 3rem;
-  grid-gap: 20px;
+  padding: 1rem;
+  padding-bottom: 4rem;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+  /* grid-gap: 20px;
   grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
   align-content: start;
-  justify-content: center;
+  justify-content: center; */
   box-shadow: .1rem .1rem 1rem #222;
   /* overflow: hidden; */
 }
 .content--single {
   grid-template-columns: 50%;
+  padding-top: 3rem;
+}
+section {
+  margin: 4rem;
+}
+section p {
+  text-indent: 2rem;
 }
 .svg--large {
   height: 11.5rem;
@@ -220,15 +232,18 @@ li {
   z-index: 0;
 }
 .card {
+  margin: 1rem;
+  flex: 1 1 30rem;
   border-radius: 1rem;
-  display: inherit;
   overflow: hidden;
+  display: grid;
   grid-template-rows: 6rem auto;
   grid-template-areas:
   "card__header"
   "card__paragraph";
   background: #fff;
-  transition: .3s;
+  transition: box-shadow .3s;
+  transition: transform .3s;
   box-shadow: .2rem .2rem 1rem #222;
 }
 .card__title {
@@ -257,6 +272,7 @@ li {
 }
 .card__body p {
   text-indent: 2rem;
+  letter-spacing: normal;
 }
 .card--hover:hover {
   transform: translate(-0.2rem, -0.2rem);
@@ -265,7 +281,7 @@ li {
 .card--hover:hover .svg--large {
   opacity: 1;
 }
-.card__body form {
+.form__contact {
   display: flex;
   flex-direction: column;
 }
