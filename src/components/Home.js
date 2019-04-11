@@ -10,7 +10,7 @@ export default class Home extends Component {
   render() {
     return (
       <main className="content">
-        <Html title="HTML" img={html_svg} />
+        <Html title="HTML" img="html" />
         <Css title="CSS" img={css3_svg} />
         <Javascript title="JavaScript" img={javascript_svg} />
       </main>

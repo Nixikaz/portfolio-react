@@ -82,7 +82,6 @@ a {
 .logo--opacity {
   opacity: .7;
 }
-
 .header__navbar {
   display: grid;
   align-content: center;
@@ -141,6 +140,14 @@ li {
 .header__navbar li:hover a {
   transition: color .3s;
   color: hsl(30, 65%, 60%);
+}
+.important {
+  color: hsl(30, 65%, 60%);
+  text-shadow:
+   -1px -1px 0 #fff,
+   1px -1px 0 #fff,
+   -1px 1px 0 #fff,
+   1px 1px 0 #fff;
 }
 .hero {
   grid-area: hero;
@@ -219,9 +226,41 @@ li {
 }
 section {
   margin: 4rem;
+  display: flex;
+  flex-direction: column;
 }
 section p {
-  text-indent: 2rem;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  letter-spacing: normal;
+  font-weight: normal;
+  line-height: 2.5rem;
+}
+section p img {
+  box-sizing: content-box;
+}
+section p .image__fam {
+  width: 150px;
+  height: 150px;
+  float: left;
+  padding-right: 1.5rem;
+}
+.image__undercon {
+  width: 160px;
+  height: 160px;
+  padding-left: 1.5rem;
+  float: right;
+}
+.image__php {
+  width: 100px;
+  height: 100px;
+  padding-right: 1.5rem;
+  float: left;
+}
+.image__js {
+  width: 200px;
+  height: 200px;
+  padding-left: 1.5rem;
+  float: right;
 }
 .svg--large {
   height: 11.5rem;
@@ -235,7 +274,6 @@ section p {
   margin: 1rem;
   flex: 1 1 30rem;
   border-radius: 1rem;
-  overflow: hidden;
   display: grid;
   grid-template-rows: 6rem auto;
   grid-template-areas:
@@ -251,6 +289,7 @@ section p {
   background: #ddd;
   padding: 1rem;
   padding-left: 2rem;
+  border-radius: 1rem 1rem 0 0;
   margin: 0;
   text-align: left;
   grid-area: card__header;
@@ -260,6 +299,7 @@ section p {
 }
 .card__title h1 {
   text-shadow: .2rem .2rem .3rem #222;
+  font-size: 3.2rem;
   margin: 0;
 }
 .card__body {
@@ -271,7 +311,6 @@ section p {
   padding: 1rem;
 }
 .card__body p {
-  text-indent: 2rem;
   letter-spacing: normal;
 }
 .card--hover:hover {
@@ -281,10 +320,17 @@ section p {
 .card--hover:hover .svg--large {
   opacity: 1;
 }
+.background__html {
+  background: url('./images/html5.svg');
+  background-repeat: no-repeat;
+  background-size: 16rem;
+  background-position: center;
+}
 .form__contact {
   display: flex;
   flex-direction: column;
 }
+
 footer {
   padding: 2rem;
   grid-area: footer;
