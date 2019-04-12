@@ -5,7 +5,7 @@ const About = () => {
     <main className="content content--single">
       <section>
         <h1>About</h1>
-        <p><img src="https://source.unsplash.com/random/150x150" alt="test" className="image__fam" />
+        <p><img src="https://source.unsplash.com/random/250x250" alt="test" className="image__fam" />
           Hi, my name is Kevin. I am a self-taught front-end web developer and coding has become a big part of my life.
           I’m married to an amazing wife and have a wonderful 15 month old daughter. In my spare time, I enjoy coding,
           playing video games, or playing my guitar.

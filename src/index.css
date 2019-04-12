@@ -229,18 +229,19 @@ section {
   display: flex;
   flex-direction: column;
 }
-section p {
+section > p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   letter-spacing: normal;
   font-weight: normal;
   line-height: 2.5rem;
+  padding-top: 2rem;
 }
 section p img {
   box-sizing: content-box;
 }
 section p .image__fam {
-  width: 150px;
-  height: 150px;
+  width: 250px;
+  height: 250px;
   float: left;
   padding-right: 1.5rem;
 }
@@ -283,19 +284,18 @@ section p .image__fam {
   transition: box-shadow .3s;
   transition: transform .3s;
   box-shadow: .2rem .2rem 1rem #222;
+  overflow: hidden;
 }
 .card__title {
   height: 6rem;
-  background: #ddd;
+  background: linear-gradient(hsl(197, 62%, 40%), hsl(197, 62%, 29%));
   padding: 1rem;
   padding-left: 2rem;
   border-radius: 1rem 1rem 0 0;
   margin: 0;
   text-align: left;
   grid-area: card__header;
-  background: hsl(197, 61%, 29%);
   z-index: 1;
-  box-shadow: 0 .1rem .2rem #888;
 }
 .card__title h1 {
   text-shadow: .2rem .2rem .3rem #222;
@@ -306,7 +306,7 @@ section p .image__fam {
   font-size: 1.7rem;
   line-height: 2.3rem;
   z-index: 1;
-  color: hsl(197, 61%, 29%);
+  color: #222;
   grid-area: card__paragraph;
   padding: 1rem;
 }
@@ -321,10 +321,22 @@ section p .image__fam {
   opacity: 1;
 }
 .background__html {
-  background: url('./images/html5.svg');
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('./images/html5.svg');
   background-repeat: no-repeat;
   background-size: 16rem;
-  background-position: center;
+  background-position: right;
+}
+.background__css {
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('./images/css3.svg');
+  background-repeat: no-repeat;
+  background-size: 16rem;
+  background-position: right;
+}
+.background__js {
+  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('./images/javascript.svg');
+  background-repeat: no-repeat;
+  background-size: 16rem;
+  background-position: right;
 }
 .form__contact {
   display: flex;
