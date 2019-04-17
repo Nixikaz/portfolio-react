@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
+import html from '../images/html5.svg'
 
 export default class Html extends Component {
+  componentWillMount() {
+    let test = document.getElementsByClassName('image__html');
+    console.log(test.style);
+  }
   render() {
     return (
-      <section className="card card--hover">
+      <section className="card">
         <div className="card__title">
+        <img className="image__html" src={html} alt="HTML5"/>
           <h1>HTML</h1>
         </div>
-        <div className={"card__body background__html"}>
+        <div className="card__body">
           <p>
-            I have used <abbr title="HyperText Markup Language">HTML</abbr> on and off for personal projects for over 24 years. I
-            have a fairly good understanding up to and including the <abbr title="HyperText Markup Language">HTML</abbr>
-            5 specification. Most recently with <em>Accessibility</em> and <em>Semantic HTML</em>.
+            <em><abbr title="HyperText Markup Language">HTML</abbr></em>
+            5, <em>Accessibility</em>, and <em>Semantic HTML</em>.
           </p>
         </div>
       </section>
     );
   }
 }
+

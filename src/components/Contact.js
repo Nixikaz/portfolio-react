@@ -6,7 +6,7 @@ export default class Contact extends Component {
       <main className="content content--single">
         <section>
           <h1>Contact</h1>
-          <form className="form__contact" action="/thankyou" netlify>
+          <form name="contact" className="form__contact" action="/thankyou" netlify>
             <label htmlFor="fName">First Name</label>
             <input type="text" name="fName" id="firstName" />
             <label htmlFor="lName">Last Name</label>

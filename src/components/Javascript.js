@@ -1,21 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import jsimg from '../images/javascript.svg';
 
-export default class Javascript extends Component {
-  render() {
-    return (
-      <section className="card card--hover">
-        <div className="card__title">
-          <h1>JavaScript</h1>
-        </div>
-        <div className="card__body background__js">
-          <p>
-            Writing JavaScript is what really drove me into wanting to become a web developer. In just under two years,
-            I have learned a lot about coding in JavaScript. I have just started using React. In fact, this website was
-            built using React as a learning experience. I am pretty familiar with writing vanilla JavaScript, but I also
-            have experience with jQuery and D3.js.
+const Javascript = () => {
+  return (
+    <section className="card">
+      <div className="card__title">
+        <img className="image__javascript" src={jsimg} alt="Javascript" />
+        <h1>JavaScript</h1>
+      </div>
+      <div className="card__body">
+        <p>
+          ES2015+, <abbr title="asynchronous JavaScript and XML">AJAX</abbr>, Promises, async/await,
           </p>
-        </div>
-      </section>
-    );
-  }
-}
+      </div>
+    </section>
+  );
+};
+
+export default Javascript;

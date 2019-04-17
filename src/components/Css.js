@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+import React from 'react';
+import cssimg from '../images/css3.svg';
 
-export default class Css extends Component {
-  render() {
-    const css = 'Cascading Style Sheets';
-    return (
-      <section className="card card--hover">
-        <div className="card__title">
-          <h1>CSS</h1>
-        </div>
-        <div className="card__body background__css">
-          <p>
-            This website was built using mostly <abbr title={css}>CSS</abbr> grid. I have made layouts using blocks, floats, flexbox, and grid. I am also
-            comfortable using psuedo-classes, psuedo-elements, and media queries for responsive web design. I have used{' '}
-            <em>Bootstrap</em> and <em>Materialize</em> mostly for prototyping, but I generally prefer to write my own
-            custom <abbr title={css}>CSS</abbr>. I have just started to incorporate the <abbr title="Block, Element, Modifier">BEM</abbr> naming convention into my workflow.
-          </p>
-        </div>
-      </section>
-    );
-  }
-}
+const Css = () => {
+  return (
+    <section className="card">
+      <div className="card__title">
+        <img className="image__css" src={cssimg} alt="css" />
+        <h1>CSS</h1>
+      </div>
+      <div className="card__body">
+        <p>
+          <abbr title="Cascading Style Sheets">CSS</abbr>3, flexbox and grid, responsive web design, <em>Bootstrap</em>, <em>Materialize</em>, <abbr title="Block, Element, Modifier">BEM</abbr>
+        </p>
+      </div>
+    </section>
+  );
+};
+
+export default Css;
