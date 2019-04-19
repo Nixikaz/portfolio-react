@@ -9,9 +9,12 @@ const Javascript = () => {
         <h1>JavaScript</h1>
       </div>
       <div className="card__body">
-        <p>
-          ES2015+, <abbr title="asynchronous JavaScript and XML">AJAX</abbr>, Promises, async/await,
-        </p>
+        <ul>
+          <li>ES2015+</li>
+          <li><abbr title="asynchronous JavaScript and XML">AJAX</abbr></li>
+          <li>Promises</li>
+          <li>Async/Await</li>
+        </ul>
       </div>
     </div>
   );

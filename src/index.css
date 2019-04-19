@@ -218,15 +218,11 @@ li {
   align-content: start;
   justify-content: center; */
   box-shadow: .1rem .1rem 1rem #222;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .content--single {
   grid-template-columns: 50%;
   padding-top: 3rem;
-}
-section {
-  display: flex;
-  flex-direction: column;
 }
 section > p {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -270,9 +266,11 @@ section p .image__fam {
   opacity: 0.3;
   z-index: 0;
 }
+.card__section {
+  flex: 1 1 20rem;
+}
 .card {
   margin: 1rem;
-  flex: 1 1 30rem;
   display: grid;
   grid-template-areas:
   "card__header"
@@ -312,6 +310,14 @@ section p .image__fam {
 }
 .card--hover:hover .svg--large {
   opacity: 1;
+}
+.card__list {
+  display: flex;
+  justify-content: space-around;
+  flex-flow: row wrap;
+}
+.card__list li {
+  flex-basis: 10rem;
 }
 .image__html {
   width: 6rem;

@@ -9,12 +9,11 @@ const Html = () => {
         <h1>HTML</h1>
       </div>
       <div className="card__body">
-        <p>
-          <em>
-            <abbr title="HyperText Markup Language">HTML</abbr>
-          </em>
-          5, <em>Accessibility</em>, and <em>Semantic HTML</em>.
-        </p>
+        <ul>
+          <li><abbr title="HyperText Markup Language">HTML</abbr>5</li>
+          <li>Accessibility</li>
+          <li>Semantic HTML</li>
+        </ul>
       </div>
     </div>
   );
