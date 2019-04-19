@@ -225,7 +225,6 @@ li {
   padding-top: 3rem;
 }
 section {
-  margin: 4rem;
   display: flex;
   flex-direction: column;
 }
@@ -274,7 +273,6 @@ section p .image__fam {
 .card {
   margin: 1rem;
   flex: 1 1 30rem;
-  border-radius: 1rem;
   display: grid;
   grid-template-areas:
   "card__header"
@@ -296,9 +294,6 @@ section p .image__fam {
   font-size: 3.2rem;
   margin-top: 0.5rem;
 }
-/* .card__title img {
-  opacity: 0;
-} */
 .card__body {
   font-size: 1.7rem;
   line-height: 2.3rem;
