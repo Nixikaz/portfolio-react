@@ -199,7 +199,8 @@ li {
   'hero_last hero_front';
   grid-template-columns: auto 1fr;
   grid-template-rows: 1rem 7.6rem auto;
-  margin: 10rem;
+  margin-top: 6rem;
+  margin-left: 6rem;
 }
 .content {
   background: #154355;
@@ -210,8 +211,8 @@ li {
   z-index: 0;
   padding: 1rem;
   padding-bottom: 4rem;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-flow: row wrap;
+  justify-content: space-around;
   align-content: flex-start;
   box-shadow: .1rem .1rem 1rem #222;
   overflow: hidden;
@@ -262,12 +263,12 @@ section p .image__fam {
   opacity: 0.3;
   z-index: 0;
 }
-.card__section {
+/* .card__section {
   flex: 1 1 30rem;
-}
+} */
 .card {
   width: 25rem;
-  border: 1px solid red;
+  flex-grow: 1;
   margin: 1rem;
   display: grid;
   grid-template-areas:
