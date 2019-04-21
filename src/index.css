@@ -211,12 +211,8 @@ li {
   padding: 1rem;
   padding-bottom: 4rem;
   flex-wrap: wrap;
-  justify-content: flex-start;
+  justify-content: center;
   align-content: flex-start;
-  /* grid-gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-  align-content: start;
-  justify-content: center; */
   box-shadow: .1rem .1rem 1rem #222;
   overflow: hidden;
 }
@@ -267,9 +263,11 @@ section p .image__fam {
   z-index: 0;
 }
 .card__section {
-  flex: 1 1 20rem;
+  flex: 1 1 30rem;
 }
 .card {
+  width: 25rem;
+  border: 1px solid red;
   margin: 1rem;
   display: grid;
   grid-template-areas:
@@ -297,9 +295,9 @@ section p .image__fam {
   line-height: 2.3rem;
   z-index: 1;
   text-align: center;
-  /* color: #222; */
   grid-area: card__paragraph;
-  padding: 1rem;
+  margin: 0.5rem;
+  padding: 0.5rem;
 }
 .card__body p {
   letter-spacing: normal;
@@ -313,10 +311,22 @@ section p .image__fam {
 }
 .card__list {
   display: flex;
-  justify-content: space-around;
-  flex-flow: row wrap;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.card__list li {
+.card__list li:nth-child(odd) {
+  padding-right: 1rem;
+  text-align: right;
+  flex-basis: 10rem;
+}
+.card__list li:nth-child(even) {
+  padding-left: 1rem;
+  text-align: left;
+  flex-basis: 10rem;
+}
+.card__list li:last-child {
+  padding: 0.5rem;
+  text-align: center;
   flex-basis: 10rem;
 }
 .image__html {
