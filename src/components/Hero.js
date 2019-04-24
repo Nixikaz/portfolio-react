@@ -5,7 +5,11 @@ import '../images/code_hero.jpg';
 export default class Hero extends Component {
   render() {
     return (
-      <Spring from={{ height: 800, opacity: 0 }} to={{ height: 250, opacity: 1 }} config={config.gentle}>
+      <Spring
+        from={{ height: 800, opacity: 0 }}
+        to={{ height: 250, opacity: 1 }}
+        config={{ delay: 500, friction: 100, duration: 800 }}
+      >
         {({ height, opacity }) => (
           <div className="hero" style={{ height }}>
             <div className="hero__grid" style={{ opacity }}>
