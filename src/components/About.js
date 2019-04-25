@@ -33,11 +33,13 @@ const About = () => {
           school.
         </p>
         <p>
+          <img src={D3DotJs} alt="test" className="image__js" /><img src={JQuery} alt="test" className="image__js" />
+            <img src={ReactLogo} alt="test" className="image__js" />
+
           Finally about two years ago, I was assigned a task at work to develop a front-end to display metrics for my
-          <img src={D3DotJs} alt="test" className="image__d3" />
           company’s production floor. I had to learn to use JavaScript for the project, as well as jQuery, and D3.js.
-          <img src={JQuery} alt="test" className="image__jq" />I also had to learn how to use AJAX requests. It was then that I decided to learn as much as I can and pursue a
-          <img src={ReactLogo} alt="test" className="image__react" />
+          I also had to learn how to use AJAX requests. It was then that I decided to learn as much as I can and pursue a
+
           career in web development. Now I am starting to learn React and eventually would like to become a full
           stack developer.
         </p>

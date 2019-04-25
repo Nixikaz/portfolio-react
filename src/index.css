@@ -247,19 +247,9 @@ section p .image__fam {
   padding-right: 1.5rem;
   float: left;
 }
-.image__d3 {
+.image__js {
   width: 40px;
-  padding-left: 1.5rem;
-  float: right;
-}
-.image__jq {
-  width: 40px;
-  padding-right: 1.5rem;
-  float: left;
-}
-.image__react {
-  width: 40px;
-  padding-left: 1.5rem;
+  padding-left:  1rem;
   float: right;
 }
 .svg--large {
@@ -269,6 +259,10 @@ section p .image__fam {
   transition: opacity 0.3s;
   opacity: 0.3;
   z-index: 0;
+}
+#about {
+  display: flex;
+  flex-wrap: wrap;
 }
 #about h1 {
   font-size: 4rem;
