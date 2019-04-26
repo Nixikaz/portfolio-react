@@ -230,27 +230,11 @@ section > p {
 section p img {
   box-sizing: content-box;
 }
-section p .image__fam {
-  width: 250px;
-  height: 250px;
+.image__fam {
+  width: 29rem;
   float: left;
-  padding-right: 1.5rem;
-}
-.image__undercon {
-  width: 160px;
-  height: 160px;
-  padding-left: 1.5rem;
-  float: right;
-}
-.image__php {
-  width: 100px;
-  padding-right: 1.5rem;
-  float: left;
-}
-.image__js {
-  width: 40px;
-  padding-left:  1rem;
-  float: right;
+  padding: 0.5rem 1.5rem 0 0;
+  border-radius: 5rem 0 0 0;
 }
 .svg--large {
   height: 11.5rem;
@@ -263,10 +247,18 @@ section p .image__fam {
 #about {
   display: flex;
   flex-wrap: wrap;
+  margin: 1rem;
+  width: 73rem;
+}
+#about p {
+  font-size: 1.5rem;
+  padding: 1rem 0;
 }
 #about h1 {
+  color: #d27f2c;
   font-size: 4rem;
-  margin-left: 5rem;
+  font-weight: 100;
+  margin-left: 4rem;
 }
 #projects > h1 {
   font-size: 4rem;
@@ -344,24 +336,6 @@ section p .image__fam {
 .image__javascript {
   width: 6rem;
 }
-/* .background__html {
-  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('./images/html5.svg');
-  background-repeat: no-repeat;
-  background-size: 16rem;
-  background-position: right;
-}
-.background__css {
-  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('./images/css3.svg');
-  background-repeat: no-repeat;
-  background-size: 16rem;
-  background-position: right;
-}
-.background__js {
-  background: linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)), url('./images/javascript.svg');
-  background-repeat: no-repeat;
-  background-size: 16rem;
-  background-position: right;
-} */
 .form__contact {
   display: flex;
   flex-direction: column;
@@ -389,6 +363,10 @@ footer {
   }
 }
 @media screen and (max-width: 615px) {
+  #about {
+    width: 30rem;
+    margin: 0;
+  }
   .head__container {
   grid-template-areas:
   'logo'
@@ -423,6 +401,19 @@ footer {
   .social svg {
     width: 3rem;
     height: 3rem;
+  }
+}
+@media screen and (max-width: 730px) {
+  .image__fam {
+    border-radius: 5rem 5rem 0 0;
+    padding-bottom: 2rem;
+  }
+  #about {
+    width: 30rem;
+  }
+  #about h1 {
+    margin: auto;
+    padding: 0;
   }
 }
 @media screen and (max-width: 980px) {

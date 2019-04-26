@@ -8,7 +8,7 @@ export default class Hero extends Component {
       <Spring
         from={{ height: 800, opacity: 0 }}
         to={{ height: 250, opacity: 1 }}
-        config={{ delay: 500, friction: 100, duration: 800 }}
+        config={{ friction: 100, duration: 800 }}
       >
         {({ height, opacity }) => (
           <div className="hero" style={{ height }}>
