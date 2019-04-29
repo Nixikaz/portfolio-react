@@ -260,9 +260,34 @@ section p img {
   font-weight: 100;
   margin-left: 4rem;
 }
-#projects > h1 {
+#projects {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 1rem;
+  width: 73rem;
+}
+#projects h1 {
+  color: #d27f2c;
   font-size: 4rem;
-  margin-left: 5rem;
+  font-weight: 100;
+  margin-left: 4rem;
+}
+#projects p:last-child {
+  text-align: right;
+}
+#rps_img {
+  width: 20rem;
+  border: .2rem solid #d27f2c;
+  border-radius: 2rem;
+  float: left;
+  margin: 0 1rem 0 0;
+}
+#etch_img {
+  width: 20rem;
+  border: .2rem solid #d27f2c;
+  border-radius: 2rem;
+  float: right;
+  margin: 0 0 0 1rem;
 }
 .card {
   width: 25rem;

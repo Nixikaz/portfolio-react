@@ -1,14 +1,23 @@
 import React from 'react';
+import Rps from '../images/rps.png';
+import Etch from '../images/etch.png';
 
 const Projects = () => {
   return (
     <main className="content content--single">
-      <section>
+      <section id="projects">
         <h1>Projects</h1>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Impedit sed commodi, inventore reiciendis expedita
-          similique veritatis aperiam, accusantium, numquam nisi fugit? Non quidem architecto placeat corporis rerum rem
-          dolore aperiam?
+          <img src={Rps} alt="Rock, Paper, Scissors" id="rps_img" />
+          What is going on with this. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nisi voluptas
+          beatae, reprehenderit obcaecati quae quo nesciunt voluptatem iure. Accusantium, laboriosam. Expedita maxime
+          tempora provident dicta unde, commodi tenetur illo!
+        </p>
+        <p>
+          <img src={Etch} alt="Rock, Paper, Scissors" id="etch_img" />
+          What is going on with this. Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio nisi voluptas
+          beatae, reprehenderit obcaecati quae quo nesciunt voluptatem iure. Accusantium, laboriosam. Expedita maxime
+          tempora provident dicta unde, commodi tenetur illo!
         </p>
       </section>
     </main>
