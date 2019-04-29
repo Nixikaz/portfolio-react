@@ -36,7 +36,14 @@ code {
     monospace;
 }
 a {
-  text-decoration: none;
+  color: #d27f2c;
+}
+a:hover {
+  color: #fff;
+}
+a:visited {
+  color: #abd;
+  text-decoration: underline;
 }
 .App {
   font-size: 1.6rem;
@@ -272,6 +279,10 @@ section p img {
   font-weight: 100;
   margin-left: 4rem;
 }
+#projects p {
+  margin-top: 4rem;
+  line-height: 3rem;
+}
 #projects p:last-child {
   text-align: right;
 }
@@ -280,14 +291,14 @@ section p img {
   border: .2rem solid #d27f2c;
   border-radius: 2rem;
   float: left;
-  margin: 0 1rem 0 0;
+  margin: 0 2rem 1rem 0;
 }
 #etch_img {
   width: 20rem;
   border: .2rem solid #d27f2c;
   border-radius: 2rem;
   float: right;
-  margin: 0 0 0 1rem;
+  margin: 0 0 1rem 2rem;
 }
 .card {
   width: 25rem;
