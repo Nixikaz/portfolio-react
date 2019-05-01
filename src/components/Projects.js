@@ -14,9 +14,9 @@ const Projects = () => {
             <a href="https://www.kevzem.com" target="_blank" rel="noopener noreferrer">
               <img src={Portfolio} alt="Portfolio" id="portfolio_img" />
             </a>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quo dolorem, quidem obcaecati fugiat eaque nemo
-            doloribus alias ratione sint. Fugit voluptas soluta officia temporibus eaque reiciendis nihil facilis
-            dolorum nisi!
+            Originally I had planned to create this website purely in HTML, CSS, and JavaScript without using any
+            libraries or frameworks. Although, I recently began learning React and decided it would be a good learning
+            experience to create this site using React.
             <br />
             <a href="https://github.com/Nixikaz/portfolio-react" target="_blank" rel="noopener noreferrer">
               Source Code
