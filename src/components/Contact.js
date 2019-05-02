@@ -31,13 +31,18 @@ export default class Contact extends Component {
         <section id="contact">
           <h1>Contact</h1>
           <form onSubmit={this.handleSubmit} name="contact" className="form__contact" action="/thankyou">
-            <label htmlFor="fName">First Name :</label>
-            <input type="text" name="fName" value={first} id="firstName" onChange={this.handleChange} />
-            <label htmlFor="lName">Last Name :</label>
-            <input type="text" name="lName" value={last} id="lastName" onChange={this.handleChange} />
-            <label htmlFor="email">E-Mail Address : </label>
+            <div className="hidden">
+              <label>
+                Don’t fill this out if you're human: <input name="bot-field" />
+              </label>
+            </div>
+            <label htmlFor="first">First Name</label>
+            <input type="text" name="first" value={first} id="firstName" onChange={this.handleChange} />
+            <label htmlFor="last">Last Name</label>
+            <input type="text" name="last" value={last} id="lastName" onChange={this.handleChange} />
+            <label htmlFor="email">E-Mail Address</label>
             <input type="text" name="email" value={email} id="emailAddress" onChange={this.handleChange} />
-            <label htmlFor="message">Message :</label>
+            <label htmlFor="message">Message</label>
             <textarea
               name="message"
               value={message}

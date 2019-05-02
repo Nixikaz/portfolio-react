@@ -60,6 +60,9 @@ a:visited {
   /* margin-right: 6rem;
   margin-left: 6rem; */
 }
+.hidden {
+  display: none;
+}
 .header__navbar a {
   text-decoration: none;
   color: #eee;
@@ -308,7 +311,7 @@ section p img {
   float: left;
   margin: 0 2rem 0 0;
 }
-#contact {
+#contact form {
   display: flex;
   flex-wrap: wrap;
   margin: 1rem;
@@ -326,15 +329,49 @@ section p img {
   margin-left: 4rem;
 }
 #contact label {
+  font-size: 2rem;
   text-align: start;
   vertical-align: middle;
   padding: 1rem;
 }
 #contact input {
+  color: #ddd;
+  background: #154355;
+  border: 2px solid #d27f2c;
+  border-radius: 1rem;
   padding: 1rem;
+  line-height: 2rem;
+}
+#contact input:focus {
+  outline: none;
+  background: #1d5d76;
+  border: 2px solid #abd;
+  border-radius: 1rem;
 }
 #contact textarea {
+  color: #ddd;
+  background: #154355;
+  border: 2px solid #d27f2c;
+  border-radius: 1rem;
   padding: 1rem;
+  line-height: 2rem;
+}
+#contact textarea:focus {
+  outline: none;
+  background: #1d5d76;
+  border: 2px solid #abd;
+  border-radius: 1rem;
+}
+#contact form button {
+  align-self: flex-end;
+  border-style:none;
+  background-color: #154355;
+  border: 2px solid #d27f2c;
+  color: #ddd;
+  font-size: 2rem;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 1rem;
 }
 .card {
   width: 25rem;
@@ -458,11 +495,17 @@ footer {
     justify-content: center;
   }
   .header__navbar {
+    /* display: none; */
     font-size: 1.2rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
     justify-content: center;
+    /* margin: 0 0 0 0; */
   }
+  /* .header__navbar li:not(:last-child)::after {
+    content: '';
+    padding: 0;
+  } */
   .social__links {
     padding-top: 1rem;
     justify-content: center;
@@ -486,6 +529,12 @@ footer {
   #about h1 {
     margin: auto;
     padding: 0;
+  }
+  #contact {
+    width: 25rem;
+  }
+  #contact form {
+    width: 100%;
   }
 }
 @media screen and (max-width: 980px) {
