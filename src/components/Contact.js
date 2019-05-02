@@ -30,7 +30,8 @@ export default class Contact extends Component {
       <main className="content content--single">
         <section id="contact">
           <h1>Contact</h1>
-          <form onSubmit={this.handleSubmit} name="contact" className="form__contact" action="/thankyou">
+          <form onSubmit={this.handleSubmit} name="contact" className="form__contact">
+            <input type="hidden" name="form-name" value="contact" />
             <div className="hidden">
               <label>
                 Don’t fill this out if you're human: <input name="bot-field" />
