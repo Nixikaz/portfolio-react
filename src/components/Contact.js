@@ -17,10 +17,8 @@ export default class Contact extends Component {
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
     })
-      .then(() => alert('Success!'))
+      // .then(() => alert('Success!'))
       .catch(error => alert(error));
-
-    e.preventDefault();
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -30,7 +28,7 @@ export default class Contact extends Component {
       <main className="content content--single">
         <section id="contact">
           <h1>Contact</h1>
-          <form onSubmit={this.handleSubmit} name="contact" className="form__contact">
+          <form onSubmit={this.handleSubmit} name="contact" className="form__contact" action="/thankyou">
             <input type="hidden" name="form-name" value="contact" />
             <div className="hidden">
               <label>

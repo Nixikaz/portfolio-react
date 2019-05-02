@@ -449,7 +449,21 @@ section p img {
   display: flex;
   flex-direction: column;
 }
-
+#thankyou {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  height: 100%;
+  text-align: center;
+}
+#thankyou h1 {
+  color: #d27f2c;
+  font-size: 6rem;
+  font-weight: 100;
+}
+#thankyou h3 {
+  font-weight: 500;
+}
 footer {
   padding: 2rem;
   grid-area: footer;
