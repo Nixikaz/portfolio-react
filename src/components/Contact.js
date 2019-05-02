@@ -18,7 +18,9 @@ export default class Contact extends Component {
       body: encode({ 'form-name': 'contact', ...this.state })
     })
       // .then(() => alert('Success!'))
-      .catch(error => alert(error));
+      .catch(error => console.log(error));
+
+    e.preventDefault();
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });

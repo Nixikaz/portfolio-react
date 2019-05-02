@@ -7,7 +7,7 @@ const About = () => {
       <section id="about">
         <h1>About Me</h1>
         <p>
-          <img src={WifeAndI} alt="test" className="image__fam" />
+          <img src='#' alt="test" className="image__fam" />
           Hi, my name is Kevin Zembrodt. I am a self-taught front-end web developer and coding has become a big part of
           my life. I’m married to an amazing wife and have a wonderful 15 month old daughter. In my spare time, I enjoy
           coding, playing video games, or playing my guitar.
