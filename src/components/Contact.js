@@ -20,7 +20,7 @@ export default class Contact extends Component {
       // .then(() => alert('Success!'))
       .catch(error => console.log(error));
 
-    e.preventDefault();
+    // e.preventDefault();
   };
 
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
