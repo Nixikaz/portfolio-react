@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import HideModal from './HideModal';
 
 const encode = data => {
   return Object.keys(data)
@@ -11,6 +12,7 @@ export default class Contact extends Component {
     super(props);
     this.state = { first: '', last: '', email: '', message: '' };
   }
+<<<<<<< Updated upstream
   handleSubmit = e => {
     fetch('/', {
       method: 'POST',
@@ -19,8 +21,29 @@ export default class Contact extends Component {
     })
       // .then(() => alert('Success!'))
       .catch(error => alert(error));
-  };
+=======
 
+  handleSubmit = e => {
+    // fetch('/', {
+    //   method: 'POST',
+    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    //   body: encode({ 'form-name': 'contact', ...this.state })
+    // })
+    // .then(() => {
+    //   return (
+    //     <div className="testing1">
+    //       THank you
+    //     </div>
+    //   )
+    // })
+    // .catch(error => console.log(error));
+    document.getElementById('myModal').style.display = 'block';
+  document.getElementById('test1').style.opacity = '1';
+  document.getElementById('test1').style.display = 'grid';
+  document.getElementById('test1').style.transform = 'translate(-50%, -50%)';
+    e.preventDefault();
+>>>>>>> Stashed changes
+  };
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
   render() {
     const { first, last, email, message } = this.state;
@@ -45,12 +68,16 @@ export default class Contact extends Component {
             <textarea
               name="message"
               value={message}
-              id="shortMessage"
-              cols="30"
-              rows="10"
+              rows="5"
               onChange={this.handleChange}
             />
             <button type="submit">Send Message</button>
+            <div className="modal" id="myModal" onClick={HideModal}>
+            </div>
+            <div className="thank-you" id="test1">
+              <h1>Thank you for contacting me, {this.state.first}.</h1>
+              <h4>I will get back to you as soon as possible.</h4><span id="closeBtn" onClick={HideModal}>&times;</span>
+            </div>
           </form>
         </section>
       </main>
