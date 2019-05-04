@@ -413,7 +413,7 @@ section p img {
   text-align: center;
   color: #fff;
   font-family: 'Lucida Sans';
-  transition: opacity .7s, transform .5s ease;
+  transition: opacity .7s, transform .5s;
   opacity: 0;
   padding: 2rem;
   border-radius: .5rem;

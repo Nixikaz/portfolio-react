@@ -12,37 +12,22 @@ export default class Contact extends Component {
     super(props);
     this.state = { first: '', last: '', email: '', message: '' };
   }
-<<<<<<< Updated upstream
+
   handleSubmit = e => {
     fetch('/', {
       method: 'POST',
       headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
       body: encode({ 'form-name': 'contact', ...this.state })
     })
-      // .then(() => alert('Success!'))
-      .catch(error => alert(error));
-=======
+      .then(() => {
+        document.getElementById('myModal').style.display = 'block';
+        document.getElementById('test1').style.opacity = '1';
+        document.getElementById('test1').style.display = 'grid';
+        document.getElementById('test1').style.transform = 'translate(-50%, -50%)';
+      })
+      .catch(error => console.log(error));
 
-  handleSubmit = e => {
-    // fetch('/', {
-    //   method: 'POST',
-    //   headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    //   body: encode({ 'form-name': 'contact', ...this.state })
-    // })
-    // .then(() => {
-    //   return (
-    //     <div className="testing1">
-    //       THank you
-    //     </div>
-    //   )
-    // })
-    // .catch(error => console.log(error));
-    document.getElementById('myModal').style.display = 'block';
-  document.getElementById('test1').style.opacity = '1';
-  document.getElementById('test1').style.display = 'grid';
-  document.getElementById('test1').style.transform = 'translate(-50%, -50%)';
     e.preventDefault();
->>>>>>> Stashed changes
   };
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
   render() {
@@ -65,18 +50,15 @@ export default class Contact extends Component {
             <label htmlFor="email">E-Mail Address</label>
             <input type="text" name="email" value={email} id="emailAddress" onChange={this.handleChange} />
             <label htmlFor="message">Message</label>
-            <textarea
-              name="message"
-              value={message}
-              rows="5"
-              onChange={this.handleChange}
-            />
+            <textarea name="message" value={message} rows="5" onChange={this.handleChange} />
             <button type="submit">Send Message</button>
-            <div className="modal" id="myModal" onClick={HideModal}>
-            </div>
+            <div className="modal" id="myModal" onClick={HideModal} />
             <div className="thank-you" id="test1">
               <h1>Thank you for contacting me, {this.state.first}.</h1>
-              <h4>I will get back to you as soon as possible.</h4><span id="closeBtn" onClick={HideModal}>&times;</span>
+              <h4>I will get back to you as soon as possible.</h4>
+              <span id="closeBtn" onClick={HideModal}>
+                &times;
+              </span>
             </div>
           </form>
         </section>
