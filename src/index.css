@@ -26,7 +26,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* text-shadow: 0 2px 0 rgba(0, 0, 0, 0.07); */
 }
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
@@ -57,8 +56,6 @@ a:visited {
     ". footer footer footer .";
   grid-template-columns: 1fr 3fr 5fr 3fr 1fr;
   grid-template-rows: auto auto 1fr auto;
-  /* margin-right: 6rem;
-  margin-left: 6rem; */
 }
 .hidden {
   display: none;
@@ -145,7 +142,6 @@ li {
   text-decoration: none;
   border-radius: .5rem;
   text-transform: uppercase;
-  transition: color .3s;
 }
 .header__navbar li:hover a {
   transition: color .3s;
@@ -186,11 +182,11 @@ li {
   font-weight: 850;
 }
 .hero__lastname {
-  transform: translate(0.3rem, -2.5rem);
+  transform: translate(0.3rem, -2.6rem);
   grid-area: hero_last;
   align-self: start;
   opacity: 0.7;
-  font-size: 4.5rem;
+  font-size: 4.44rem;
   font-weight: 850;
 }
 .hero__webdev {
@@ -241,10 +237,10 @@ section p img {
   box-sizing: content-box;
 }
 .image__fam {
-  width: 29rem;
-  height: 29rem;
+  width: 25rem;
+  height: 25rem;
   float: left;
-  padding: 0.5rem 1.5rem 0 0;
+  padding: 0.5rem 1rem 0 0;
   border-radius: 5rem 0 0 0;
 }
 .svg--large {
@@ -262,7 +258,8 @@ section p img {
   width: 73rem;
 }
 #about p {
-  font-size: 1.5rem;
+  line-height: 2rem;
+  font-size: 1.6rem;
   padding: 1rem 0;
 }
 #about h1 {
@@ -311,15 +308,16 @@ section p img {
   float: left;
   margin: 0 2rem 0 0;
 }
-#contact form {
+#contact {
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   margin: 1rem;
   width: 73rem;
-  justify-content: center;
 }
-#contact form {
-  width: 60rem;
+.contact__form form {
+  padding: 2rem;
+  width: 80%;
 }
 #contact > h1 {
   justify-self: left;
@@ -337,7 +335,7 @@ section p img {
 #contact input {
   color: #ddd;
   background: #154355;
-  border: 2px solid #d27f2c;
+  border: 1px solid #d27f2c;
   border-radius: 1rem;
   padding: 1rem;
   line-height: 2rem;
@@ -345,13 +343,13 @@ section p img {
 #contact input:focus {
   outline: none;
   background: #1d5d76;
-  border: 2px solid #abd;
+  border: 1px solid #abd;
   border-radius: 1rem;
 }
 #contact textarea {
   color: #ddd;
   background: #154355;
-  border: 2px solid #d27f2c;
+  border: 1px solid #d27f2c;
   border-radius: 1rem;
   padding: 1rem;
   line-height: 2rem;
@@ -359,14 +357,14 @@ section p img {
 #contact textarea:focus {
   outline: none;
   background: #1d5d76;
-  border: 2px solid #abd;
+  border: 1px solid #abd;
   border-radius: 1rem;
 }
 #contact form button {
   align-self: flex-end;
   border-style:none;
   background-color: #154355;
-  border: 2px solid #d27f2c;
+  border: 1px solid #d27f2c;
   color: #ddd;
   font-size: 2rem;
   padding: 1rem;
@@ -394,7 +392,7 @@ section p img {
   width: 100%;
   height: 100%;
   overflow: auto;
-  background-color: rgba(0, 0, 0,0.4);
+  background: linear-gradient(rgba(0, 0, 0,0.9), rgba(0,0,0,0.4), rgba(0,0,0,0.9));
 }
 .thank-you h1 {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -413,17 +411,14 @@ section p img {
   text-align: center;
   color: #fff;
   font-family: 'Lucida Sans';
-  transition: opacity .7s, transform .5s ease;
+  transition-timing-function: ease-in-out;
   opacity: 0;
   padding: 2rem;
-  border-radius: .5rem;
+  border-radius: 2rem;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -300%);
   position: absolute;
-  display: none;
-  justify-content: center;
-  align-content: center;
   border: 3px solid hsl(30, 65%, 50%);
   background: #1d5d76;
   z-index: 2;
@@ -540,6 +535,15 @@ footer {
     grid-template-columns: 1fr 1fr 2fr 2fr 2fr 1fr 1fr;
   }
 }
+@media screen and (max-width: 410px) {
+  .header__navbar li {
+    margin: 0 0.5rem 0 0.5rem;
+    font-size: 1.5rem;
+  }
+  .header__navbar li:not(:last-child)::after {
+    content: '';
+  }
+}
 @media screen and (max-width: 615px) {
   #about {
     width: 30rem;
@@ -565,16 +569,16 @@ footer {
   }
   .header__navbar {
     /* display: none; */
-    font-size: 1.2rem;
     padding-top: 2rem;
     padding-bottom: 1rem;
     justify-content: center;
-    /* margin: 0 0 0 0; */
   }
-  /* .header__navbar li:not(:last-child)::after {
-    content: '';
-    padding: 0;
-  } */
+  .header__navbar li {
+    margin: 0 0.5rem 0 0.5rem;
+  }
+  .header__navbar li:not(:last-child)::after {
+    left: 0.5rem;
+  }
   .social__links {
     padding-top: 1rem;
     justify-content: center;
@@ -598,12 +602,6 @@ footer {
   #about h1 {
     margin: auto;
     padding: 0;
-  }
-  #contact {
-    width: 25rem;
-  }
-  #contact form {
-    width: 100%;
   }
 }
 @media screen and (max-width: 980px) {

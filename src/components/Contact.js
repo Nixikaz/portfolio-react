@@ -10,23 +10,26 @@ const encode = data => {
 export default class Contact extends Component {
   constructor(props) {
     super(props);
-    this.state = { first: '', last: '', email: '', message: '' };
+    this.state = { first: '', last: '', email: '', message: '', disabled: false };
   }
 
   handleSubmit = e => {
-    fetch('/', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-      body: encode({ 'form-name': 'contact', ...this.state })
-    })
-      .then(() => {
-        document.getElementById('myModal').style.display = 'block';
-        document.getElementById('test1').style.opacity = '1';
-        document.getElementById('test1').style.display = 'grid';
-        document.getElementById('test1').style.transform = 'translate(-50%, -50%)';
+    if (!this.state.disabled) {
+      fetch('/', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: encode({ 'form-name': 'contact', ...this.state })
       })
-      .catch(error => console.log(error));
-
+        .then(() => {
+          document.getElementById('myModal').style.display = 'block';
+          document.getElementById('test1').style.transition = 'transform 0.5s, opacity 0.7s';
+          document.getElementById('test1').style.opacity = '1';
+          document.getElementById('test1').style.display = 'grid';
+          document.getElementById('test1').style.transform = 'translate(-50%, -50%)';
+        })
+        .catch(error => console.log(error));
+    }
+    this.setState({ disabled: true });
     e.preventDefault();
   };
   handleChange = e => this.setState({ [e.target.name]: e.target.value });
@@ -44,14 +47,16 @@ export default class Contact extends Component {
               </label>
             </div>
             <label htmlFor="first">First Name</label>
-            <input type="text" name="first" value={first} id="firstName" onChange={this.handleChange} />
+            <input type="text" name="first" required value={first} id="firstName" onChange={this.handleChange} />
             <label htmlFor="last">Last Name</label>
-            <input type="text" name="last" value={last} id="lastName" onChange={this.handleChange} />
+            <input type="text" name="last" required value={last} id="lastName" onChange={this.handleChange} />
             <label htmlFor="email">E-Mail Address</label>
-            <input type="text" name="email" value={email} id="emailAddress" onChange={this.handleChange} />
+            <input type="text" name="email" required value={email} id="emailAddress" onChange={this.handleChange} />
             <label htmlFor="message">Message</label>
-            <textarea name="message" value={message} rows="5" onChange={this.handleChange} />
-            <button type="submit">Send Message</button>
+            <textarea name="message" required value={message} rows="5" onChange={this.handleChange} />
+            <button id="send-btn" type="submit" disabled={this.state.disabled}>
+              {this.state.disabled ? 'Sending...' : 'Send Message'}
+            </button>
             <div className="modal" id="myModal" onClick={HideModal} />
             <div className="thank-you" id="test1">
               <h1>Thank you for contacting me, {this.state.first}.</h1>
