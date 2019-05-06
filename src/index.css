@@ -21,9 +21,7 @@ body {
   min-height: 100%;
   letter-spacing: 0px;
   color: #ddd;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -50,10 +48,10 @@ a:visited {
   min-height: 100vh;
   display: grid;
   grid-template-areas:
-    ". header header header ."
-    ". hero hero hero ."
-    ". content content content ."
-    ". footer footer footer .";
+    '. header header header .'
+    '. hero hero hero .'
+    '. content content content .'
+    '. footer footer footer .';
   grid-template-columns: 1fr 3fr 5fr 3fr 1fr;
   grid-template-rows: auto auto 1fr auto;
 }
@@ -127,7 +125,7 @@ a:visited {
   transition: fill .3s;
   fill: #d27f2c;
 }
-li.active {
+.header__navbar li.active {
   border-style: solid;
   border-width: .2rem 0 .2rem 0;
   border-color: hsl(30, 65%, 60%);
@@ -135,7 +133,7 @@ li.active {
 }
 li {
   list-style: none;
-  padding: .5rem;
+  text-align: center;
 }
 .header__navbar li {
   color: #ddd;
@@ -227,7 +225,6 @@ li {
   padding-top: 3rem;
 }
 section p {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   letter-spacing: normal;
   font-weight: normal;
   line-height: 2.5rem;
@@ -274,39 +271,68 @@ section p img {
   margin: 1rem;
   width: 73rem;
 }
+.project {
+  display: grid;
+  grid-template-areas:
+  'title title'
+  'image list';
+  width: 100%;
+  justify-content: start;
+  margin: 0;
+}
+.project > h2 {
+  grid-area: title;
+  color: #d27f2c;
+  text-align: center;
+  margin: 0 0 0 2rem;
+  padding-top: 1rem;
+  font-weight: 100;
+  text-shadow: .2rem .2rem 0 #333;
+}
+.project h2 a {
+  text-decoration: none;
+}
+.project > img {
+  grid-area: image;
+  align-self: start;
+  margin-top: 2.5rem;
+}
+.project > a {
+  grid-area: image;
+  align-self: start;
+  margin-top: 2.5rem;
+}
+.project > ul {
+  grid-area: list;
+}
 #projects h1 {
   color: #d27f2c;
   font-size: 4rem;
   font-weight: 100;
   margin-left: 4rem;
 }
-#projects h2 {
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-  text-align: center;
-  margin: 0 0 1rem 0;
-  padding-top: 1rem;
+#projects li {
+  font-weight: 100;
+  margin: 2rem;
+}
+#projects strong {
   font-weight: 500;
-  text-shadow: .2rem .2rem 0 #333;
 }
 #projects div:nth-child(2) {
   margin: 1rem 0 0 0;
 }
 #projects div {
-  margin: 3rem 0 0 0;
-}
-#projects div p {
-  padding: 1rem 0 2rem;
-  line-height: 3rem;
+  /* margin: 3rem 0 0 0; */
+  padding: 0 0 2rem;
+  line-height: 2rem;
 }
 #projects p:nth-child(2) {
   margin-top: 1rem;
 }
 #projects img {
   width: 20rem;
-  border: .2rem solid #d27f2c;
+  border: .1rem solid #d27f2c;
   border-radius: 1rem;
-  float: left;
-  margin: 0 2rem 0 0;
 }
 #contact {
   display: flex;
@@ -372,7 +398,6 @@ section p img {
   border-radius: 1rem;
 }
 #closeBtn {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   position: absolute;
   padding: .2rem;
   right: .5rem;
@@ -395,7 +420,6 @@ section p img {
   background: linear-gradient(rgba(0, 0, 0,0.9), rgba(0,0,0,0.4), rgba(0,0,0,0.9));
 }
 .thank-you h1 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 4rem;
   font-weight: 100;
   text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
@@ -403,14 +427,12 @@ section p img {
   margin: 0;
 }
 .thank-you h4 {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 1rem;
   font-weight: 100;
 }
 .thank-you {
   text-align: center;
   color: #fff;
-  font-family: 'Lucida Sans';
   transition-timing-function: ease-in-out;
   opacity: 0;
   padding: 2rem;
@@ -432,13 +454,9 @@ section p img {
   "card__header"
   "card__paragraph";
   color: #ddd;
-  /* transition: box-shadow .3s;
-  transition: transform .3s;
-  box-shadow: .2rem .2rem 1rem #222; */
   overflow: hidden;
 }
 .card__title {
-  /* background: linear-gradient(hsl(197, 62%, 40%), hsl(197, 62%, 29%)); */
   text-align: center;
   grid-area: card__header;
   z-index: 1;
@@ -454,7 +472,6 @@ section p img {
   z-index: 1;
   text-align: center;
   grid-area: card__paragraph;
-  /* background: #fff; */
 }
 .card__body p {
   letter-spacing: normal;
@@ -499,21 +516,6 @@ section p img {
   display: flex;
   flex-direction: column;
 }
-#thankyou {
-  display: grid;
-  justify-content: center;
-  align-content: center;
-  height: 100%;
-  text-align: center;
-}
-#thankyou h1 {
-  color: #d27f2c;
-  font-size: 6rem;
-  font-weight: 100;
-}
-#thankyou h3 {
-  font-weight: 500;
-}
 footer {
   padding: 2rem;
   grid-area: footer;
@@ -543,11 +545,27 @@ footer {
   .header__navbar li:not(:last-child)::after {
     content: '';
   }
+  #about .image__fam {
+    padding: 1rem;
+    margin: 0 4rem;
+  }
 }
-@media screen and (max-width: 615px) {
+@media screen and (max-width: 500px) {
+  .image__fam {
+    border-radius: 5rem 5rem 0 0;
+    margin: 0 9rem 1rem;
+  }
+}
+@media screen and (max-width: 630px) {
   #about {
-    width: 30rem;
-    margin: 0;
+    width: 100%;
+  }
+  #about p {
+    width: 100%;
+  }
+  #about h1 {
+    margin: auto;
+    padding: 0;
   }
   .head__container {
   grid-template-areas:
@@ -568,7 +586,6 @@ footer {
     justify-content: center;
   }
   .header__navbar {
-    /* display: none; */
     padding-top: 2rem;
     padding-bottom: 1rem;
     justify-content: center;
@@ -590,18 +607,22 @@ footer {
     width: 3rem;
     height: 3rem;
   }
-}
-@media screen and (max-width: 730px) {
-  .image__fam {
-    border-radius: 5rem 5rem 0 0;
-    padding-bottom: 2rem;
-  }
-  #about {
-    width: 30rem;
-  }
-  #about h1 {
+  #projects h1 {
     margin: auto;
-    padding: 0;
+  }
+  .project {
+    grid-template-areas:
+    'title'
+    'image'
+    'list';
+    text-align: center;
+    justify-items: center;
+  }
+  .project h2 {
+    margin: 0;
+  }
+  #contact h1 {
+    margin: auto;
   }
 }
 @media screen and (max-width: 980px) {
