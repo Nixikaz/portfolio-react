@@ -443,7 +443,7 @@ section p img {
   border-radius: 2rem;
   left: 50%;
   top: 50%;
-  transform: translate(-50%, -300%);
+  transform: translate(-50%, -600%);
   position: absolute;
   border: 3px solid hsl(30, 65%, 50%);
   background: #1d5d76;
