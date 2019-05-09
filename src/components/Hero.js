@@ -1,27 +1,32 @@
 import React, { Component } from 'react';
-import { Spring } from 'react-spring/renderprops';
+import Html from './Html';
+import Css from './Css';
+import Javascript from './Javascript';
 import '../images/code_hero.jpg';
 
 export default class Hero extends Component {
   render() {
     return (
-      <Spring
-        from={{ height: 800, opacity: 0 }}
-        to={{ height: 250, opacity: 1 }}
-        config={{ friction: 100, duration: 800 }}
-      >
-        {({ height, opacity }) => (
-          <div className="hero" style={{ height }}>
-            <div className="hero__grid" style={{ opacity }}>
-              <span className="hero__intro">Hi, my name is</span>
-              <span className="hero__firstname">Kevin</span>
-              <span className="hero__and">and I am a</span>
-              <span className="hero__lastname">Zembrodt</span>
-              <span className="hero__webdev">front-end developer</span>
-            </div>
-          </div>
-        )}
-      </Spring>
+      <div className="hero">
+        <div className="hero__grid">
+          <span className="hero__intro">Hi, lorem ipsum</span>
+          <span className="hero__firstname">Lorem</span>
+          <span className="hero__and">and I am a</span>
+          <span className="hero__lastname">Ipsum</span>
+          <span className="hero__webdev">Lorem, ipsum dolor sit</span>
+        </div>
+        <main className="content home__content">
+          <section className="card__section">
+            <Html />
+          </section>
+          <section className="card__section">
+            <Css />
+          </section>
+          <section className="card__section">
+            <Javascript />
+          </section>
+        </main>
+      </div>
     );
   }
 }
