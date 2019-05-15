@@ -8,9 +8,12 @@ import Footer from './components/Footer';
 import Hero from './components/Hero';
 import { BrowserRouter, Route } from 'react-router-dom';
 
+// Check for IE support
+const isIE = /*@cc_on!@*/false || !!document.documentMode;
+
 class App extends Component {
   render() {
-    return (
+    if(!isIE) {return (
       <BrowserRouter>
         <div className="App">
           <Header />
@@ -22,7 +25,13 @@ class App extends Component {
           <Footer />
         </div>
       </BrowserRouter>
-    );
+    );} else {
+      return (
+        <div>
+          <h1>This web site does not support Internet Explorer.</h1>
+        </div>
+      )
+    }
   }
 }
 

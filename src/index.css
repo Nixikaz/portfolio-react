@@ -479,6 +479,12 @@ section p img {
 }
 .card__body p {
   letter-spacing: normal;
+  margin-top: 0;
+  padding-top: 0;
+}
+.card__title button {
+  border: none;
+  background: #154355;
 }
 .card--hover:hover {
   transform: translate(-0.2rem, -0.2rem);

@@ -27,7 +27,7 @@ export default class Home extends Component {
         <Spring from={animateFrom} to={animateTo} config={{ delay: 1900, duration: 300 }}>
           {props => (
             <section className="card__section" style={props}>
-              <Javascript />
+            <Javascript />
             </section>
           )}
         </Spring>
