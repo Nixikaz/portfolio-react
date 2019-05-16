@@ -639,9 +639,6 @@ footer {
   #contact h1 {
     margin: auto;
   }
-  .hero {
-    background-position-x: -60vw;
-  }
 }
 @media screen and (max-width: 980px) {
   .hero__grid {
@@ -654,9 +651,6 @@ footer {
   'hero_and'
   'hero_front';
   margin: 4rem 0 0 0;
-  }
-  .hero {
-    background-size: 100vh;
   }
   .hero__intro {
     padding-bottom: 1rem;
