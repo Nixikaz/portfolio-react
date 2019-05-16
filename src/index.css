@@ -548,6 +548,9 @@ footer {
     ". . footer footer footer . .";
     grid-template-columns: 1fr 1fr 2fr 2fr 2fr 1fr 1fr;
   }
+  .hero {
+    background-size: 100%;
+  }
 }
 @media screen and (max-width: 410px) {
   .header__navbar li {
