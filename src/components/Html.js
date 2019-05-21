@@ -12,7 +12,6 @@ export default class Html extends Component {
     }));
   };
   render() {
-    const toggle = this.state.cardSwitched;
     const htmlBody = this.state.cardSwitched ? (
       <ul>
         <li>
@@ -33,7 +32,7 @@ export default class Html extends Component {
       </Spring>
     );
     return (
-      <div className="card" onClick={this.cardToggle}>
+      <div className="card card--linked" onClick={this.cardToggle}>
         <div className="card__title">
           <img className="image__html" src={html} alt="HTML5" />
           <h1>HTML</h1>
