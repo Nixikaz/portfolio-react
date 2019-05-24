@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "core-js": "^3.0.1",
+    "@babel/polyfill": "^7.4.4",
     "react": "^16.8.2",
     "react-app-polyfill": "^1.0.1",
     "react-dom": "^16.8.2",
