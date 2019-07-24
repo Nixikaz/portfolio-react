@@ -40,16 +40,6 @@ export default class Javascript extends Component {
           <h1>JavaScript</h1>
         </div>
         <div className="card__body">{htmlBody}</div>
-        <div className="card__body">
-          <ul>
-            <li>ES2015+</li>
-            <li>
-              <abbr title="asynchronous JavaScript and XML">AJAX</abbr>
-            </li>
-            <li>Promises</li>
-            <li>Async/Await</li>
-          </ul>
-        </div>
       </div>
     );
   }
