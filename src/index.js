@@ -5,7 +5,7 @@ import * as serviceWorker from './serviceWorker';
 import './images/code_hero.jpg';
 import './index.css';
 import './sanitize.css';
-import "@babel/polyfill";
+// import "@babel/polyfill";
 // Internet Explorer 6-11
 // let isIE = /*@cc_on!@*/ false || !!document.documentMode;
 
