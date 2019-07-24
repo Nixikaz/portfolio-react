@@ -11,9 +11,15 @@ export default class Home extends Component {
     return (
       <main className="content">
         <div className="home__intro">
-          <p>I have a passion for design and practicality.  I like to create things that are not only functional, but also appealling to the eye.
-        I like how web development utilizes the best of both these worlds. I like solving problems and preventing them through testing.</p>
-          <blockquote className="intro__quote"><p>Anything worth doing, is worth doing right.</p></blockquote><cite>-Hunter S. Thompson</cite>
+          <p>
+            I have a passion for design and practicality. I like to create things that are not only functional, but also
+            appealing to the eye. I like how web development utilizes the best of both these worlds. I like solving
+            problems and preventing them through testing.
+          </p>
+          <blockquote className="intro__quote">
+            <p>Anything worth doing, is worth doing right.</p>
+          </blockquote>
+          <cite>-Hunter S. Thompson</cite>
         </div>
         <Spring from={animateFrom} to={animateTo} config={{ delay: 1700, duration: 300, tension: 100, friction: 14 }}>
           {props => (
